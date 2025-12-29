@@ -96,7 +96,7 @@ export default function Hero({
             {heroData.secondaryCtaText && (
               <Link
                 href={heroData.secondaryCtaHref}
-                className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-4 font-medium text-lg rounded hover:bg-white hover:text-[#2D2D2D] transition-all duration-300 hover:-translate-y-1"
+                className="inline-flex items-center justify-center bg-white text-[#2D2D2D] px-8 py-4 font-medium text-lg rounded hover:bg-[#F5F0E8] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 {heroData.secondaryCtaText}
               </Link>
