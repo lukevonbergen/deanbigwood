@@ -1,19 +1,23 @@
-import CarpentryHero from '@/components/hero/CarpentryHero';
-import CarpentryServices from '@/components/services/CarpentryServices';
-import CarpentryAbout from '@/components/about/CarpentryAbout';
-import CarpentryGallery from '@/components/gallery/CarpentryGallery';
-import CarpentryTestimonials from '@/components/testimonials/CarpentryTestimonials';
-import CarpentryContact from '@/components/contact/CarpentryContact';
+import Hero from '@/components/hero/Hero';
+import Welcome from '@/components/sections/Welcome';
+import Services from '@/components/services/Services';
+import WhyChooseUs from '@/components/sections/WhyChooseUs';
+import Gallery from '@/components/gallery/Gallery';
+import Testimonials from '@/components/testimonials/Testimonials';
+import CTABanner from '@/components/cta/CTABanner';
+import ContactPreview from '@/components/contact/ContactPreview';
 
 export default function HomePage() {
   return (
-    <main>
-      <CarpentryHero />
-      <CarpentryServices />
-      <CarpentryAbout />
-      <CarpentryGallery />
-      <CarpentryTestimonials />
-      <CarpentryContact />
-    </main>
+    <>
+      <Hero />
+      <Welcome />
+      <Services limit={4} showViewAll={true} />
+      <WhyChooseUs />
+      <Gallery limit={6} />
+      <Testimonials />
+      <CTABanner />
+      <ContactPreview />
+    </>
   );
 }

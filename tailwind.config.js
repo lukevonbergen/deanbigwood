@@ -13,8 +13,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
-        inter: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-opensans)', 'system-ui', 'sans-serif'],
+        opensans: ['var(--font-opensans)', 'system-ui', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'Georgia', 'serif'],
+      },
+      colors: {
+        primary: '#B8860B',
+        secondary: '#2D2D2D',
+        accent: '#F5F0E8',
+        dark: '#333333',
       },
     },
   },

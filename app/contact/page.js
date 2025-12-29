@@ -1,94 +1,76 @@
-'use client';
-
-import { useState } from 'react';
 import { siteConfig } from '@/config/siteConfig';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import PageHero from '@/components/hero/PageHero';
+import ContactForm from '@/components/contact/ContactForm';
+
+export const metadata = {
+  title: 'Contact Us | Bigwood Bathrooms & Kitchens',
+  description: 'Get in touch for a free quote on bathroom, kitchen, and tiling services. Contact Bigwood Bathrooms & Kitchens today.',
+};
 
 export default function ContactPage() {
   const { contact } = siteConfig;
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    setTimeout(() => setIsSubmitted(false), 5000);
-  };
 
   return (
-    <main className="pt-20">
+    <>
       {/* Hero Section */}
-      <section className="bg-[#5C4033] py-20 px-6 md:px-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            {contact.heading}
-          </h1>
-          <p className="text-xl text-[#D4C4B0]">
-            {contact.subheading}
-          </p>
-        </div>
-      </section>
+      <PageHero
+        title="Contact Us"
+        subtitle="Get in touch for a free, no-obligation quote"
+        image="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2340&auto=format&fit=crop"
+        imageAlt="Luxury bathroom"
+      />
 
       {/* Contact Content */}
-      <section className="py-20 px-6 md:px-12 bg-[#FAF8F5]">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-semibold text-[#2C2416] mb-6">
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Contact Info Sidebar */}
+            <div className="lg:col-span-1 space-y-6">
+              {/* Contact Details */}
+              <div className="bg-[#F5F0E8] rounded-lg p-6">
+                <h3 className="text-xl font-playfair font-bold text-[#2D2D2D] mb-6">
                   Contact Details
-                </h2>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#D4C4B0] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-[#5C4033]" />
+                </h3>
+
+                <div className="space-y-5">
+                  <a
+                    href={`tel:${contact.phone.replace(/\s/g, '')}`}
+                    className="flex items-start gap-4 group"
+                  >
+                    <div className="w-12 h-12 bg-[#B8860B] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#9a7209] transition-colors">
+                      <Phone className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-[#8B7355] mb-1">Phone</p>
-                      <a
-                        href={`tel:${contact.phone.replace(/\s/g, '')}`}
-                        className="text-lg font-medium text-[#2C2416] hover:text-[#5C4033] transition-colors"
-                      >
+                      <p className="text-sm text-[#666666] mb-1">Phone</p>
+                      <p className="text-lg font-semibold text-[#2D2D2D] group-hover:text-[#B8860B] transition-colors">
                         {contact.phone}
-                      </a>
+                      </p>
                     </div>
-                  </div>
+                  </a>
 
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#D4C4B0] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-6 h-6 text-[#5C4033]" />
+                  <a
+                    href={`mailto:${contact.email}`}
+                    className="flex items-start gap-4 group"
+                  >
+                    <div className="w-12 h-12 bg-[#B8860B] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-[#9a7209] transition-colors">
+                      <Mail className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-[#8B7355] mb-1">Email</p>
-                      <a
-                        href={`mailto:${contact.email}`}
-                        className="text-lg font-medium text-[#2C2416] hover:text-[#5C4033] transition-colors"
-                      >
+                      <p className="text-sm text-[#666666] mb-1">Email</p>
+                      <p className="font-semibold text-[#2D2D2D] group-hover:text-[#B8860B] transition-colors break-all">
                         {contact.email}
-                      </a>
+                      </p>
                     </div>
-                  </div>
+                  </a>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[#D4C4B0] rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-6 h-6 text-[#5C4033]" />
+                    <div className="w-12 h-12 bg-[#B8860B] rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <p className="text-sm text-[#8B7355] mb-1">Service Area</p>
-                      <p className="text-lg font-medium text-[#2C2416]">
+                      <p className="text-sm text-[#666666] mb-1">Service Area</p>
+                      <p className="font-semibold text-[#2D2D2D]">
                         {contact.serviceArea}
                       </p>
                     </div>
@@ -96,151 +78,72 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Additional Info */}
-              <div className="bg-white rounded-xl p-6 border border-[#D4C4B0]">
-                <h3 className="font-semibold text-[#2C2416] mb-3">
-                  Free Quotes & Consultations
-                </h3>
-                <p className="text-[#5C4033] leading-relaxed mb-4">
-                  Get in touch to discuss your project. We offer free, no-obligation
-                  quotes and are happy to visit your property to provide accurate
-                  estimates.
-                </p>
-                <p className="text-[#5C4033] leading-relaxed">
-                  Whether it's a small repair or a complete renovation, we're here to help.
-                  We typically respond within 24 hours.
-                </p>
+              {/* Opening Hours */}
+              <div className="bg-[#F5F0E8] rounded-lg p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <Clock className="w-5 h-5 text-[#B8860B]" />
+                  <h3 className="text-xl font-playfair font-bold text-[#2D2D2D]">
+                    Opening Hours
+                  </h3>
+                </div>
+                <ul className="space-y-3">
+                  {contact.hours.map((item, index) => (
+                    <li key={index} className="flex justify-between text-sm">
+                      <span className="text-[#666666]">{item.day}</span>
+                      <span className="font-medium text-[#2D2D2D]">{item.time}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
-              {/* Working Hours */}
-              <div className="bg-white rounded-xl p-6 border border-[#D4C4B0]">
-                <h3 className="font-semibold text-[#2C2416] mb-3">
-                  Working Hours
+              {/* Additional Info */}
+              <div className="bg-[#2D2D2D] rounded-lg p-6 text-white">
+                <h3 className="text-lg font-playfair font-bold mb-3">
+                  Free Quotes
                 </h3>
-                <ul className="space-y-2 text-[#5C4033]">
-                  <li className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-medium">8:00 AM - 6:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-medium">9:00 AM - 4:00 PM</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-medium">Closed</span>
-                  </li>
-                </ul>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  Get in touch to discuss your project. We offer free, no-obligation quotes and are happy to visit your property to provide accurate estimates.
+                </p>
+                <div className="mt-4 pt-4 border-t border-white/20">
+                  <p className="text-white/80 text-sm">
+                    We typically respond within <span className="text-[#B8860B] font-semibold">24 hours</span>
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-xl p-8 border border-[#D4C4B0] shadow-sm">
-              <h2 className="text-2xl font-semibold text-[#2C2416] mb-6">
-                {contact.form.heading}
-              </h2>
-
-              {isSubmitted ? (
-                <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                  </div>
-                  <h3 className="text-lg font-semibold text-green-800 mb-2">Message Sent!</h3>
-                  <p className="text-green-700">
-                    Thank you for your message. We'll be in touch within 24 hours.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-[#2C2416] mb-2"
-                    >
-                      {contact.form.fields.name.label} *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder={contact.form.fields.name.placeholder}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-[#D4C4B0] bg-[#FAF8F5] text-[#2C2416] placeholder-[#8B7355] focus:outline-none focus:ring-2 focus:ring-[#5C4033] focus:border-transparent transition"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-[#2C2416] mb-2"
-                    >
-                      {contact.form.fields.email.label} *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder={contact.form.fields.email.placeholder}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-[#D4C4B0] bg-[#FAF8F5] text-[#2C2416] placeholder-[#8B7355] focus:outline-none focus:ring-2 focus:ring-[#5C4033] focus:border-transparent transition"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-[#2C2416] mb-2"
-                    >
-                      {contact.form.fields.phone.label}
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      placeholder={contact.form.fields.phone.placeholder}
-                      className="w-full px-4 py-3 rounded-lg border border-[#D4C4B0] bg-[#FAF8F5] text-[#2C2416] placeholder-[#8B7355] focus:outline-none focus:ring-2 focus:ring-[#5C4033] focus:border-transparent transition"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-[#2C2416] mb-2"
-                    >
-                      {contact.form.fields.message.label} *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder={contact.form.fields.message.placeholder}
-                      rows={5}
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-[#D4C4B0] bg-[#FAF8F5] text-[#2C2416] placeholder-[#8B7355] focus:outline-none focus:ring-2 focus:ring-[#5C4033] focus:border-transparent transition resize-none"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-[#5C4033] hover:bg-[#4A3429] text-white font-semibold py-4 rounded-lg transition-all duration-300 hover:shadow-lg"
-                  >
-                    {contact.form.button}
-                  </button>
-                </form>
-              )}
+            <div className="lg:col-span-2">
+              <ContactForm />
             </div>
           </div>
         </div>
       </section>
-    </main>
+
+      {/* Map Placeholder */}
+      <section className="h-96 bg-[#F5F0E8] relative">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+            <MapPin className="w-12 h-12 text-[#B8860B] mx-auto mb-4" />
+            <h3 className="text-xl font-playfair font-bold text-[#2D2D2D] mb-2">
+              Service Area Map
+            </h3>
+            <p className="text-[#666666]">
+              Google Maps embed placeholder - {contact.serviceArea}
+            </p>
+          </div>
+        </div>
+        {/* In production, replace with: */}
+        {/* <iframe
+          src="https://www.google.com/maps/embed?pb=..."
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        /> */}
+      </section>
+    </>
   );
 }

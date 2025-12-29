@@ -1,48 +1,48 @@
 // config/siteConfig.js
 export const siteConfig = {
-  siteName: 'Oakwood Carpentry',
+  siteName: 'Bigwood Bathrooms & Kitchens',
   logo: {
-    text: 'Oakwood Carpentry',
-    src: '/logo/oakwood-logo.png',
-    alt: 'Oakwood Carpentry Logo',
+    text: 'Bigwood Bathrooms & Kitchens',
+    src: '/logo/bigwood-logo.png',
+    alt: 'Bigwood Bathrooms & Kitchens Logo',
     height: 50,
   },
   metadata: {
     base: {
-      title: 'Oakwood Carpentry – Quality Craftsmanship, Built to Last',
+      title: 'Bigwood Bathrooms & Kitchens – Quality Bathrooms, Kitchens & Tiling',
       description:
-        'Bespoke carpentry services including fitted kitchens, custom furniture, built-in wardrobes, flooring, and more. Family-run business with 15+ years experience.',
+        'Professional bathroom fitting, kitchen installation, and tiling services. Quality craftsmanship with attention to detail. Serving the local area and surroundings.',
       icons: { icon: '/favicon.ico' },
     },
   },
 
   fonts: {
-    base: `'Inter', sans-serif`,
-    heading: `'Inter', sans-serif`,
-    baseClass: 'font-inter',
-    headingClass: 'font-inter',
-    google: { base: 'Inter', heading: 'Inter', accent: 'Inter' },
+    base: `'Open Sans', sans-serif`,
+    heading: `'Playfair Display', serif`,
+    baseClass: 'font-opensans',
+    headingClass: 'font-playfair',
+    google: { base: 'Open Sans', heading: 'Playfair Display', accent: 'Open Sans' },
   },
 
-  // Earthy color scheme
+  // Warm professional color scheme
   brand: {
-    primary: '#5C4033', // warm brown
-    secondary: '#8B7355', // lighter brown
-    accent: '#D4C4B0', // cream/tan
-    background: '#FAF8F5', // off-white
-    dark: '#2C2416', // dark charcoal brown
+    primary: '#B8860B', // warm copper/bronze
+    secondary: '#2D2D2D', // dark charcoal
+    accent: '#F5F0E8', // warm tan/beige
+    background: '#FFFFFF', // clean white
+    dark: '#333333', // dark gray text
   },
 
   styles: {
-    bgLight: 'bg-[#FAF8F5]',
-    bgPrimary: 'bg-[#5C4033]',
-    bgSecondary: 'bg-[#8B7355]',
-    bgAccent: 'bg-[#D4C4B0]',
-    textPrimary: 'text-[#2C2416]',
-    textMuted: 'text-[#5C4033]',
-    textLight: 'text-[#FAF8F5]',
-    borderLight: 'border-[#D4C4B0]',
-    borderDark: 'border-[#5C4033]',
+    bgLight: 'bg-white',
+    bgPrimary: 'bg-[#B8860B]',
+    bgSecondary: 'bg-[#2D2D2D]',
+    bgAccent: 'bg-[#F5F0E8]',
+    textPrimary: 'text-[#333333]',
+    textMuted: 'text-[#666666]',
+    textLight: 'text-white',
+    borderLight: 'border-[#F5F0E8]',
+    borderDark: 'border-[#B8860B]',
   },
 
   banner: {
@@ -51,19 +51,19 @@ export const siteConfig = {
 
   nav: {
     links: [
-      { label: 'Services', href: '/services' },
+      { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },
-      { label: 'Gallery', href: '/gallery' },
+      { label: 'Services', href: '/services' },
       { label: 'Contact', href: '/contact' },
     ],
   },
 
   footer: {
-    copyright: 'Oakwood Carpentry',
+    copyright: 'Bigwood Bathrooms & Kitchens',
     nav: [
-      { label: 'Services', href: '/services' },
+      { label: 'Home', href: '/' },
       { label: 'About', href: '/about' },
-      { label: 'Gallery', href: '/gallery' },
+      { label: 'Services', href: '/services' },
       { label: 'Contact', href: '/contact' },
     ],
     social: {
@@ -78,117 +78,219 @@ export const siteConfig = {
   },
 
   hero: {
-    image: 'https://images.unsplash.com/photo-1729837149098-1e173e7b96fb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    imageAlt: 'Craftsman working on wood in workshop',
-    heading: 'Quality Craftsmanship, Built to Last',
-    subheading: 'Bespoke carpentry services in Surrey & South London',
-    ctaText: 'Get a Free Quote',
+    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2340&auto=format&fit=crop',
+    imageAlt: 'Modern luxury bathroom with elegant fixtures',
+    heading: 'Quality Bathrooms, Kitchens & Tiling',
+    subheading: 'Transforming your home with expert craftsmanship',
+    ctaText: 'Get a Quote',
     ctaHref: '/contact',
+    secondaryCtaText: 'View Our Work',
+    secondaryCtaHref: '#projects',
+  },
+
+  welcome: {
+    heading: 'Welcome to Bigwood Bathrooms & Kitchens',
+    content: `We are a trusted local business specialising in high-quality bathroom installations, kitchen fitting, and professional tiling services. With years of experience in the trade, we take pride in delivering exceptional results that transform your living spaces.
+
+From complete bathroom renovations to stunning kitchen makeovers and precision tiling work, our skilled team handles every project with meticulous attention to detail. We work closely with our clients to understand their vision and bring it to life, ensuring complete satisfaction every time.`,
+    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
+    imageAlt: 'Beautiful modern kitchen installation',
   },
 
   services: {
     heading: 'Our Services',
-    subheading: 'Expert craftsmanship for every project',
+    subheading: 'Comprehensive solutions for your home improvement needs',
     items: [
       {
-        title: 'Fitted Kitchens',
-        description: 'Custom-designed kitchens built to your exact specifications, maximising space and style.',
+        title: 'Bathroom Fitting',
+        description: 'Complete bathroom installations from design to completion. We handle everything including plumbing, tiling, and fixtures.',
+        icon: 'bath',
+        features: [
+          'Full bathroom design consultation',
+          'Complete installation service',
+          'Plumbing and electrical work',
+          'High-quality fixtures and fittings',
+          'Wet room installations',
+          'Accessible bathroom solutions',
+        ],
+      },
+      {
+        title: 'Kitchen Installation',
+        description: 'Professional kitchen fitting services. Transform your kitchen with our expert installation and attention to detail.',
         icon: 'kitchen',
+        features: [
+          'Kitchen design and planning',
+          'Cabinet and worktop installation',
+          'Appliance fitting',
+          'Plumbing and electrical connections',
+          'Splashback and tiling',
+          'Complete project management',
+        ],
       },
       {
-        title: 'Bespoke Furniture',
-        description: 'One-of-a-kind furniture pieces crafted to match your home and personal taste.',
-        icon: 'furniture',
+        title: 'Tiling',
+        description: 'Expert wall and floor tiling for bathrooms, kitchens, and throughout your home. Precision cuts and flawless finishes.',
+        icon: 'grid',
+        features: [
+          'Wall and floor tiling',
+          'Natural stone installation',
+          'Porcelain and ceramic tiles',
+          'Mosaic and feature walls',
+          'Underfloor heating compatible',
+          'Waterproofing and tanking',
+        ],
       },
       {
-        title: 'Built-in Wardrobes',
-        description: 'Space-saving storage solutions tailored to fit any room perfectly.',
-        icon: 'wardrobe',
+        title: 'Renovations',
+        description: 'Full renovation services to modernise and refresh your bathroom or kitchen. Complete transformation guaranteed.',
+        icon: 'home',
+        features: [
+          'Complete room renovations',
+          'Structural modifications',
+          'Plumbing upgrades',
+          'Electrical rewiring',
+          'Plastering and finishing',
+          'Project coordination',
+        ],
       },
       {
-        title: 'Flooring',
-        description: 'Professional installation of hardwood, engineered wood, and laminate flooring.',
-        icon: 'flooring',
+        title: 'Repairs & Maintenance',
+        description: 'Quick and reliable repair services for all bathroom and kitchen issues. From leaky taps to broken tiles.',
+        icon: 'wrench',
+        features: [
+          'Tap and shower repairs',
+          'Toilet and cistern fixes',
+          'Tile replacement',
+          'Grouting and resealing',
+          'Leak detection and repair',
+          'General maintenance',
+        ],
+      },
+    ],
+  },
+
+  whyChooseUs: {
+    heading: 'Why Choose Us',
+    subheading: 'Quality workmanship you can trust',
+    items: [
+      {
+        title: 'Expert Craftsmanship',
+        description: 'Years of experience delivering exceptional results with attention to every detail.',
+        icon: 'award',
       },
       {
-        title: 'Doors & Windows',
-        description: 'Expert fitting and restoration of interior and exterior doors and windows.',
-        icon: 'door',
+        title: 'Quality Materials',
+        description: 'We use only premium materials and products from trusted suppliers.',
+        icon: 'gem',
       },
       {
-        title: 'General Carpentry',
-        description: 'From skirting boards to shelving, we handle all your carpentry needs.',
-        icon: 'hammer',
+        title: 'Fully Insured',
+        description: 'Complete peace of mind with full public liability insurance coverage.',
+        icon: 'shield',
+      },
+      {
+        title: 'Free Quotes',
+        description: 'Transparent pricing with no hidden costs. Get a free, no-obligation quote.',
+        icon: 'calculator',
       },
     ],
   },
 
   about: {
-    heading: 'About Oakwood Carpentry',
-    content: `With over 15 years of experience, Oakwood Carpentry is a family-run business dedicated to delivering exceptional craftsmanship. We take pride in every project, from bespoke furniture to complete kitchen installations.
+    heading: 'About Bigwood Bathrooms & Kitchens',
+    content: `Bigwood Bathrooms & Kitchens is a dedicated team of skilled tradespeople committed to delivering outstanding bathroom, kitchen, and tiling solutions for homeowners across the local area.
 
-We use only the finest quality materials and traditional woodworking techniques combined with modern precision. Our team is fully insured and committed to completing every job to the highest standards, on time and within budget.
+With a passion for quality craftsmanship and an eye for detail, we approach every project—big or small—with the same level of care and professionalism. From initial consultation through to final completion, we work closely with our clients to ensure their vision becomes reality.
 
-Whether you're looking to transform your home with custom cabinetry or need reliable general carpentry work, we're here to bring your vision to life.`,
-    image: 'https://images.unsplash.com/photo-1628797279405-8cd6ffdbeb6c?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    imageAlt: 'Carpenter crafting wood in workshop',
+Our reputation is built on honest communication, reliable service, and workmanship that speaks for itself. We take pride in leaving every customer completely satisfied with their transformed space.`,
+    image: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?q=80&w=2340&auto=format&fit=crop',
+    imageAlt: 'Professional tradesperson at work',
     features: [
-      '15+ years experience',
-      'Family-run business',
-      'Quality materials',
+      'Experienced professionals',
+      'Quality guaranteed',
       'Fully insured',
+      'Local business',
+    ],
+    stats: [
+      { value: '10+', label: 'Years Experience' },
+      { value: '500+', label: 'Projects Completed' },
+      { value: '100%', label: 'Satisfaction Rate' },
+    ],
+    values: [
+      {
+        title: 'Quality First',
+        description: 'We never compromise on quality. Every project receives our full attention and expertise.',
+      },
+      {
+        title: 'Customer Focused',
+        description: 'Your satisfaction is our priority. We listen, advise, and deliver exactly what you need.',
+      },
+      {
+        title: 'Honest & Transparent',
+        description: 'Clear communication and fair pricing. No hidden costs or unexpected surprises.',
+      },
+      {
+        title: 'Reliable Service',
+        description: 'We turn up when we say we will and complete projects on time and within budget.',
+      },
     ],
   },
 
   gallery: {
-    heading: 'Our Work',
-    subheading: 'A selection of our recent projects',
+    heading: 'Featured Projects',
+    subheading: 'A selection of our recent work',
     images: [
       {
-        src: 'https://plus.unsplash.com/premium_photo-1676823552780-90cc52f0db1d?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Custom fitted kitchen',
+        src: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Modern luxury bathroom renovation',
+        category: 'bathroom',
       },
       {
-        src: 'https://images.unsplash.com/photo-1761656630581-69a58e4e1c09?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Bespoke wooden cabinetry',
+        src: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Contemporary kitchen installation',
+        category: 'kitchen',
       },
       {
-        src: 'https://images.unsplash.com/photo-1760155089939-1c9d2a45c0e8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Built-in storage solutions',
+        src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Elegant bathroom with freestanding bath',
+        category: 'bathroom',
       },
       {
-        src: 'https://images.unsplash.com/photo-1637747022694-92c8cbc90a38?q=80&w=2017&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Hardwood flooring installation',
+        src: 'https://images.unsplash.com/photo-1556909212-d5b604d0c90d?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Modern white kitchen design',
+        category: 'kitchen',
       },
       {
-        src: 'https://images.unsplash.com/photo-1737575212792-c0c06dd4e12a?q=80&w=1973&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Custom shelving unit',
+        src: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Professional tile work',
+        category: 'tiling',
       },
       {
-        src: 'https://images.unsplash.com/photo-1751806524631-565725f5bb74?q=80&w=973&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        alt: 'Modern kitchen with custom woodwork',
+        src: 'https://images.unsplash.com/photo-1507089947368-19c1da9775ae?q=80&w=2340&auto=format&fit=crop',
+        alt: 'Stylish bathroom renovation',
+        category: 'bathroom',
       },
     ],
   },
 
   testimonials: {
     heading: 'What Our Clients Say',
-    subheading: 'Don\'t just take our word for it',
+    subheading: "Don't just take our word for it",
     entries: [
       {
-        quote: 'Oakwood Carpentry transformed our kitchen beyond our expectations. The attention to detail was incredible, and the team was professional from start to finish. Highly recommended!',
-        name: 'Sarah Mitchell',
-        location: 'Guildford, Surrey',
+        quote: 'Absolutely delighted with our new bathroom. The team were professional, tidy, and the finished result exceeded our expectations. Would highly recommend to anyone looking for quality workmanship.',
+        name: 'Sarah M.',
+        location: 'Local Area',
       },
       {
-        quote: 'We had bespoke wardrobes fitted in all three bedrooms. The quality of workmanship is outstanding, and they maximised every inch of space. Couldn\'t be happier with the result.',
-        name: 'James & Emma Thompson',
-        location: 'Kingston upon Thames',
+        quote: 'From start to finish, the service was excellent. They helped us design the perfect kitchen and the installation was completed on time and on budget. Fantastic attention to detail.',
+        name: 'James & Emma T.',
+        location: 'Local Area',
       },
       {
-        quote: 'Reliable, skilled, and great value. They restored our Victorian sash windows beautifully and fitted new oak flooring throughout. A true craftsman\'s touch.',
-        name: 'David Chen',
-        location: 'Wimbledon, London',
+        quote: 'Had our entire bathroom retiled and a new shower installed. The quality of work is outstanding. Very pleased we chose Bigwood Bathrooms & Kitchens for our project.',
+        name: 'David C.',
+        location: 'Local Area',
       },
     ],
   },
@@ -196,18 +298,44 @@ Whether you're looking to transform your home with custom cabinetry or need reli
   contact: {
     heading: 'Get in Touch',
     subheading: 'Ready to start your project? Contact us for a free, no-obligation quote.',
-    phone: '01234 567890',
-    email: 'info@oakwoodcarpentry.co.uk',
-    serviceArea: 'Serving Surrey, South London, and surrounding areas',
+    phone: '07853 397359',
+    email: 'info@bigwoodbathrooms.co.uk',
+    serviceArea: 'Serving the local area and surrounding regions',
+    hours: [
+      { day: 'Monday - Friday', time: '8:00 AM - 6:00 PM' },
+      { day: 'Saturday', time: '9:00 AM - 4:00 PM' },
+      { day: 'Sunday', time: 'Closed' },
+    ],
     form: {
       heading: 'Request a Quote',
       fields: {
         name: { label: 'Name', placeholder: 'Your name' },
         email: { label: 'Email', placeholder: 'you@example.com' },
         phone: { label: 'Phone', placeholder: 'Your phone number' },
+        service: {
+          label: 'Service Interested In',
+          options: [
+            'Bathroom Installation',
+            'Kitchen Fitting',
+            'Tiling',
+            'Full Renovation',
+            'Repairs & Maintenance',
+            'Other',
+          ],
+        },
         message: { label: 'Message', placeholder: 'Tell us about your project...' },
       },
       button: 'Send Message',
     },
+  },
+
+  cta: {
+    heading: 'Ready to Transform Your Space?',
+    subheading: 'Get in touch today for a free, no-obligation quote',
+    phone: '07853 397359',
+    buttonText: 'Call Us Now',
+    buttonHref: 'tel:07853397359',
+    secondaryButtonText: 'Request a Quote',
+    secondaryButtonHref: '/contact',
   },
 };

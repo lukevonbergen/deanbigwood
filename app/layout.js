@@ -1,13 +1,19 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
-import CarpentryNav from '@/components/navigation/CarpentryNav';
-import CarpentryFooter from '@/components/footer/CarpentryFooter';
+import { Open_Sans, Playfair_Display } from 'next/font/google';
+import Navigation from '@/components/navigation/Navigation';
+import Footer from '@/components/footer/Footer';
 import { siteConfig } from '@/config/siteConfig';
 
-// Load Inter font
-const inter = Inter({
+// Load Open Sans font
+const openSans = Open_Sans({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-opensans',
+});
+
+// Load Playfair Display font
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
 });
 
 export const metadata = siteConfig.metadata.base;
@@ -17,16 +23,17 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <body
         className={`
-          ${inter.variable}
+          ${openSans.variable}
+          ${playfair.variable}
           font-sans
           antialiased
-          bg-[#FAF8F5]
-          text-[#2C2416]
+          bg-white
+          text-[#333333]
         `}
       >
-        <CarpentryNav />
+        <Navigation />
         <main>{children}</main>
-        <CarpentryFooter />
+        <Footer />
       </body>
     </html>
   );
